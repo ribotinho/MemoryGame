@@ -8,13 +8,23 @@
 import SwiftUI
 
 struct MenuButtonView: View {
+    
+    var title : String
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        Text(title)
+            .frame(height: 50)
+            .frame(maxWidth: .infinity)
+            .background(.black)
+            .foregroundColor(.yellow)
+            .clipShape(Capsule())
+        
     }
 }
 
 struct MenuButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        MenuButtonView()
+        MenuButtonView(title: "easy")
     }
 }

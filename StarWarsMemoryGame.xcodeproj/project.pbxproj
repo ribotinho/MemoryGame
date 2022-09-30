@@ -8,17 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		5FF2ED3F28E6D54F005D62FD /* StarWarsMemoryGameApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF2ED3E28E6D54F005D62FD /* StarWarsMemoryGameApp.swift */; };
-		5FF2ED4128E6D54F005D62FD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF2ED4028E6D54F005D62FD /* ContentView.swift */; };
 		5FF2ED4328E6D551005D62FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FF2ED4228E6D551005D62FD /* Assets.xcassets */; };
 		5FF2ED4628E6D551005D62FD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FF2ED4528E6D551005D62FD /* Preview Assets.xcassets */; };
+		5FF2ED4D28E6D606005D62FD /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF2ED4C28E6D606005D62FD /* Game.swift */; };
+		5FF2ED4F28E6D60C005D62FD /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF2ED4E28E6D60C005D62FD /* Card.swift */; };
+		5FF2ED5328E6D686005D62FD /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF2ED5228E6D686005D62FD /* CardView.swift */; };
+		5FF2ED5628E6D920005D62FD /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF2ED5528E6D920005D62FD /* OnboardingView.swift */; };
+		5FF2ED5928E6D931005D62FD /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF2ED5828E6D931005D62FD /* GameView.swift */; };
+		5FF2ED5B28E6DD5F005D62FD /* MenuButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF2ED5A28E6DD5F005D62FD /* MenuButtonView.swift */; };
+		5FF2ED5E28E6E41B005D62FD /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF2ED5D28E6E41B005D62FD /* GameViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5FF2ED3B28E6D54F005D62FD /* StarWarsMemoryGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWarsMemoryGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FF2ED3E28E6D54F005D62FD /* StarWarsMemoryGameApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsMemoryGameApp.swift; sourceTree = "<group>"; };
-		5FF2ED4028E6D54F005D62FD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5FF2ED4228E6D551005D62FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5FF2ED4528E6D551005D62FD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5FF2ED4C28E6D606005D62FD /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		5FF2ED4E28E6D60C005D62FD /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		5FF2ED5228E6D686005D62FD /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		5FF2ED5528E6D920005D62FD /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		5FF2ED5828E6D931005D62FD /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		5FF2ED5A28E6DD5F005D62FD /* MenuButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButtonView.swift; sourceTree = "<group>"; };
+		5FF2ED5D28E6E41B005D62FD /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +64,10 @@
 			isa = PBXGroup;
 			children = (
 				5FF2ED3E28E6D54F005D62FD /* StarWarsMemoryGameApp.swift */,
-				5FF2ED4028E6D54F005D62FD /* ContentView.swift */,
+				5FF2ED5428E6D907005D62FD /* Screens */,
+				5FF2ED5C28E6E40C005D62FD /* ViewModel */,
+				5FF2ED5028E6D610005D62FD /* Model */,
+				5FF2ED5128E6D673005D62FD /* Views */,
 				5FF2ED4228E6D551005D62FD /* Assets.xcassets */,
 				5FF2ED4428E6D551005D62FD /* Preview Content */,
 			);
@@ -65,6 +80,41 @@
 				5FF2ED4528E6D551005D62FD /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5FF2ED5028E6D610005D62FD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5FF2ED4C28E6D606005D62FD /* Game.swift */,
+				5FF2ED4E28E6D60C005D62FD /* Card.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5FF2ED5128E6D673005D62FD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5FF2ED5228E6D686005D62FD /* CardView.swift */,
+				5FF2ED5A28E6DD5F005D62FD /* MenuButtonView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5FF2ED5428E6D907005D62FD /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				5FF2ED5528E6D920005D62FD /* OnboardingView.swift */,
+				5FF2ED5828E6D931005D62FD /* GameView.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		5FF2ED5C28E6E40C005D62FD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5FF2ED5D28E6E41B005D62FD /* GameViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +187,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5FF2ED4128E6D54F005D62FD /* ContentView.swift in Sources */,
+				5FF2ED4D28E6D606005D62FD /* Game.swift in Sources */,
 				5FF2ED3F28E6D54F005D62FD /* StarWarsMemoryGameApp.swift in Sources */,
+				5FF2ED4F28E6D60C005D62FD /* Card.swift in Sources */,
+				5FF2ED5B28E6DD5F005D62FD /* MenuButtonView.swift in Sources */,
+				5FF2ED5E28E6E41B005D62FD /* GameViewModel.swift in Sources */,
+				5FF2ED5628E6D920005D62FD /* OnboardingView.swift in Sources */,
+				5FF2ED5928E6D931005D62FD /* GameView.swift in Sources */,
+				5FF2ED5328E6D686005D62FD /* CardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

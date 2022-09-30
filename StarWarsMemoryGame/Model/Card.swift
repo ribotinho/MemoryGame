@@ -6,3 +6,14 @@
 //
 
 import Foundation
+
+struct Card: Identifiable {
+    var id = UUID()
+    var value : String
+    var isFlipped = false
+    var isMatched = false
+    
+    init(value: String){
+        self.value = value
+    }
+}
