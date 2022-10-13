@@ -16,8 +16,9 @@ struct MenuButtonView: View {
         Text(title)
             .frame(height: 50)
             .frame(maxWidth: .infinity)
-            .background(.black)
-            .foregroundColor(.yellow)
+            .font(Fonts.tangoSans(weight: .bold, size: 15))
+            .background(.pink)
+            .foregroundColor(.white)
             .clipShape(Capsule())
         
     }

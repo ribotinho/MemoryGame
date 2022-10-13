@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-struct GameView: View {
+struct MemoryGameView: View {
     
     @Environment(\.isPresented) var isPresented
-    @ObservedObject var viewModel : GameViewModel
+    @ObservedObject var viewModel : MemoryGameViewModel
     @State private var movements : Int = 0
     
     var body: some View {
@@ -20,16 +20,19 @@ struct GameView: View {
             VStack {
                 HStack {
                     Text("Difficulty")
+                        .font(Fonts.tangoSans(weight: .regular, size: 16))
                     Spacer()
-                    Text(viewModel.difficulty.rawValue)
+                    Text(viewModel.game.rawValue)
                 }
                 HStack {
                     Text("Movements completed")
+                        .font(Fonts.tangoSans(weight: .regular, size: 16))
                     Spacer()
                     Text("\(movements)")
                 }
                 HStack {
                     Text("Total pairs")
+                        .font(Fonts.tangoSans(weight: .regular, size: 16))
                     Spacer()
                     Text("\(viewModel.pairs)")
                 }
@@ -39,7 +42,7 @@ struct GameView: View {
             
             LazyVGrid(columns: viewModel.columns) {
                 ForEach(viewModel.cards) { card in
-                    CardView(card: card, size: viewModel.getCardSize())
+                    CardView(card: card, size: viewModel.game.cardSize)
                         .onTapGesture {
                             movements += 1
                             viewModel.tapped(card: card)
@@ -53,7 +56,7 @@ struct GameView: View {
                     movements = 0
                     viewModel.restart()
                 }
-                .padding(.top)
+                .padding()
         }
         .onChange(of: isPresented) { _ in
            viewModel.restart()

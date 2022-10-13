@@ -8,27 +8,30 @@
 import SwiftUI
 
 struct OnboardingView: View {
+    
     var body: some View {
         NavigationView{
             VStack{
                 
-                Image("SWLogo")
+                Image("fruit")
                     .resizable()
                     .scaledToFit()
                     .frame(height: 200)
                     .cornerRadius(10)
-                    .padding(.top)
+                    .padding(.top, 50)
                 
                 Spacer()
+                    .frame(height: 100)
                 
                 Text("Choose your difficulty")
-                    .font(.title)
+                    .font(Fonts.tangoSans(weight: .regular, size: 30))
                 
-                ForEach(GameDifficulty.allCases, id: \.self) { diffculty in
+                ForEach(MemoryGame.allCases, id: \.self) { difficulty in
                     
-                    let gameViewModel = GameViewModel(difficulty: diffculty)
-                    NavigationLink(destination: GameView(viewModel: gameViewModel)){
-                        MenuButtonView(title: diffculty.rawValue)
+                    let gameViewModel = MemoryGameViewModel(game: difficulty)
+                    
+                    NavigationLink(destination: MemoryGameView(viewModel: gameViewModel)){
+                        MenuButtonView(title: difficulty.rawValue)
                             .padding([.leading, .trailing])
                     }
                 }

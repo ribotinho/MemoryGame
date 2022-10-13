@@ -7,30 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5FB8A0A928F8801600DC0B00 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB8A0A828F8801600DC0B00 /* String+Ext.swift */; };
+		5FB8A0AF28F884FC00DC0B00 /* TangoSans_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5FB8A0AB28F884EA00DC0B00 /* TangoSans_Bold.ttf */; };
+		5FB8A0B228F8850300DC0B00 /* TangoSans_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5FB8A0AD28F884EA00DC0B00 /* TangoSans_Regular.ttf */; };
+		5FB8A0B628F8860400DC0B00 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB8A0B528F8860400DC0B00 /* Constants.swift */; };
 		5FF2ED3F28E6D54F005D62FD /* StarWarsMemoryGameApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF2ED3E28E6D54F005D62FD /* StarWarsMemoryGameApp.swift */; };
 		5FF2ED4328E6D551005D62FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FF2ED4228E6D551005D62FD /* Assets.xcassets */; };
 		5FF2ED4628E6D551005D62FD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FF2ED4528E6D551005D62FD /* Preview Assets.xcassets */; };
-		5FF2ED4D28E6D606005D62FD /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF2ED4C28E6D606005D62FD /* Game.swift */; };
+		5FF2ED4D28E6D606005D62FD /* MemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF2ED4C28E6D606005D62FD /* MemoryGame.swift */; };
 		5FF2ED4F28E6D60C005D62FD /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF2ED4E28E6D60C005D62FD /* Card.swift */; };
 		5FF2ED5328E6D686005D62FD /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF2ED5228E6D686005D62FD /* CardView.swift */; };
 		5FF2ED5628E6D920005D62FD /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF2ED5528E6D920005D62FD /* OnboardingView.swift */; };
-		5FF2ED5928E6D931005D62FD /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF2ED5828E6D931005D62FD /* GameView.swift */; };
+		5FF2ED5928E6D931005D62FD /* MemoryGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF2ED5828E6D931005D62FD /* MemoryGameView.swift */; };
 		5FF2ED5B28E6DD5F005D62FD /* MenuButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF2ED5A28E6DD5F005D62FD /* MenuButtonView.swift */; };
-		5FF2ED5E28E6E41B005D62FD /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF2ED5D28E6E41B005D62FD /* GameViewModel.swift */; };
+		5FF2ED5E28E6E41B005D62FD /* MemoryGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF2ED5D28E6E41B005D62FD /* MemoryGameViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5FB8A0A828F8801600DC0B00 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
+		5FB8A0AB28F884EA00DC0B00 /* TangoSans_Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = TangoSans_Bold.ttf; sourceTree = "<group>"; };
+		5FB8A0AD28F884EA00DC0B00 /* TangoSans_Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = TangoSans_Regular.ttf; sourceTree = "<group>"; };
+		5FB8A0B328F885C800DC0B00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		5FB8A0B528F8860400DC0B00 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		5FF2ED3B28E6D54F005D62FD /* StarWarsMemoryGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWarsMemoryGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FF2ED3E28E6D54F005D62FD /* StarWarsMemoryGameApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsMemoryGameApp.swift; sourceTree = "<group>"; };
 		5FF2ED4228E6D551005D62FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5FF2ED4528E6D551005D62FD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		5FF2ED4C28E6D606005D62FD /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		5FF2ED4C28E6D606005D62FD /* MemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGame.swift; sourceTree = "<group>"; };
 		5FF2ED4E28E6D60C005D62FD /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		5FF2ED5228E6D686005D62FD /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		5FF2ED5528E6D920005D62FD /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
-		5FF2ED5828E6D931005D62FD /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		5FF2ED5828E6D931005D62FD /* MemoryGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGameView.swift; sourceTree = "<group>"; };
 		5FF2ED5A28E6DD5F005D62FD /* MenuButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButtonView.swift; sourceTree = "<group>"; };
-		5FF2ED5D28E6E41B005D62FD /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
+		5FF2ED5D28E6E41B005D62FD /* MemoryGameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGameViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +53,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5FB8A0A528F87FD000DC0B00 /* OnboardingView */ = {
+			isa = PBXGroup;
+			children = (
+				5FF2ED5528E6D920005D62FD /* OnboardingView.swift */,
+			);
+			path = OnboardingView;
+			sourceTree = "<group>";
+		};
+		5FB8A0A628F87FD700DC0B00 /* GameView */ = {
+			isa = PBXGroup;
+			children = (
+				5FF2ED5828E6D931005D62FD /* MemoryGameView.swift */,
+				5FF2ED5D28E6E41B005D62FD /* MemoryGameViewModel.swift */,
+			);
+			path = GameView;
+			sourceTree = "<group>";
+		};
+		5FB8A0A728F8800200DC0B00 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				5FB8A0AA28F884D400DC0B00 /* Fonts */,
+				5FB8A0A828F8801600DC0B00 /* String+Ext.swift */,
+				5FB8A0B528F8860400DC0B00 /* Constants.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		5FB8A0AA28F884D400DC0B00 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				5FB8A0AB28F884EA00DC0B00 /* TangoSans_Bold.ttf */,
+				5FB8A0AD28F884EA00DC0B00 /* TangoSans_Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		5FF2ED3228E6D54F005D62FD = {
 			isa = PBXGroup;
 			children = (
@@ -63,11 +108,12 @@
 		5FF2ED3D28E6D54F005D62FD /* StarWarsMemoryGame */ = {
 			isa = PBXGroup;
 			children = (
+				5FB8A0B328F885C800DC0B00 /* Info.plist */,
 				5FF2ED3E28E6D54F005D62FD /* StarWarsMemoryGameApp.swift */,
 				5FF2ED5428E6D907005D62FD /* Screens */,
-				5FF2ED5C28E6E40C005D62FD /* ViewModel */,
 				5FF2ED5028E6D610005D62FD /* Model */,
-				5FF2ED5128E6D673005D62FD /* Views */,
+				5FF2ED5128E6D673005D62FD /* CustomViews */,
+				5FB8A0A728F8800200DC0B00 /* Support */,
 				5FF2ED4228E6D551005D62FD /* Assets.xcassets */,
 				5FF2ED4428E6D551005D62FD /* Preview Content */,
 			);
@@ -85,36 +131,28 @@
 		5FF2ED5028E6D610005D62FD /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				5FF2ED4C28E6D606005D62FD /* Game.swift */,
+				5FF2ED4C28E6D606005D62FD /* MemoryGame.swift */,
 				5FF2ED4E28E6D60C005D62FD /* Card.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		5FF2ED5128E6D673005D62FD /* Views */ = {
+		5FF2ED5128E6D673005D62FD /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
 				5FF2ED5228E6D686005D62FD /* CardView.swift */,
 				5FF2ED5A28E6DD5F005D62FD /* MenuButtonView.swift */,
 			);
-			path = Views;
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 		5FF2ED5428E6D907005D62FD /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				5FF2ED5528E6D920005D62FD /* OnboardingView.swift */,
-				5FF2ED5828E6D931005D62FD /* GameView.swift */,
+				5FB8A0A528F87FD000DC0B00 /* OnboardingView */,
+				5FB8A0A628F87FD700DC0B00 /* GameView */,
 			);
 			path = Screens;
-			sourceTree = "<group>";
-		};
-		5FF2ED5C28E6E40C005D62FD /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				5FF2ED5D28E6E41B005D62FD /* GameViewModel.swift */,
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,8 +213,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FB8A0AF28F884FC00DC0B00 /* TangoSans_Bold.ttf in Resources */,
 				5FF2ED4628E6D551005D62FD /* Preview Assets.xcassets in Resources */,
 				5FF2ED4328E6D551005D62FD /* Assets.xcassets in Resources */,
+				5FB8A0B228F8850300DC0B00 /* TangoSans_Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,13 +227,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5FF2ED4D28E6D606005D62FD /* Game.swift in Sources */,
+				5FB8A0A928F8801600DC0B00 /* String+Ext.swift in Sources */,
+				5FF2ED4D28E6D606005D62FD /* MemoryGame.swift in Sources */,
 				5FF2ED3F28E6D54F005D62FD /* StarWarsMemoryGameApp.swift in Sources */,
 				5FF2ED4F28E6D60C005D62FD /* Card.swift in Sources */,
 				5FF2ED5B28E6DD5F005D62FD /* MenuButtonView.swift in Sources */,
-				5FF2ED5E28E6E41B005D62FD /* GameViewModel.swift in Sources */,
+				5FB8A0B628F8860400DC0B00 /* Constants.swift in Sources */,
+				5FF2ED5E28E6E41B005D62FD /* MemoryGameViewModel.swift in Sources */,
 				5FF2ED5628E6D920005D62FD /* OnboardingView.swift in Sources */,
-				5FF2ED5928E6D931005D62FD /* GameView.swift in Sources */,
+				5FF2ED5928E6D931005D62FD /* MemoryGameView.swift in Sources */,
 				5FF2ED5328E6D686005D62FD /* CardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -326,11 +368,12 @@
 				DEVELOPMENT_TEAM = 97979SR3M8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StarWarsMemoryGame/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.board-games";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -355,11 +398,12 @@
 				DEVELOPMENT_TEAM = 97979SR3M8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StarWarsMemoryGame/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.board-games";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

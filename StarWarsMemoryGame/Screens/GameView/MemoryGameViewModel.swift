@@ -8,56 +8,53 @@
 import Foundation
 import SwiftUI
 
-final class GameViewModel : ObservableObject {
+final class MemoryGameViewModel : ObservableObject {
     
     @Published var cards : [Card] = []
     @Published var pairs = 0
     var cardsLeft : Int = 0
-    var difficulty : GameDifficulty
+    var game : MemoryGame
     var columns : [GridItem]
     var tappedCardIndex : Int?
     
-    init(difficulty: GameDifficulty){
-        self.difficulty = difficulty
-        self.columns = Array(repeating: .init(.flexible()), count: difficulty.numberOfColumns())
-        self.cards = generateArrayFromRandomElements(count: difficulty.numberOfCards() / 2)
+    
+    
+    init(game: MemoryGame){
+        self.game = game
+        self.columns = Array(repeating: .init(.flexible()), count: game.numberOfColumns())
+        self.cards = generateRandomArray()
     }
     
-    func generateArrayFromRandomElements(count : Int) -> [Card] {
-        
+    
+    func generateRandomArray() -> [Card] {
+        print("hello im here")
         var cards : [Card] = []
-        var values : [String] = ["😇", "😍", "😎", "🤪", "🤬", "🥶"]
+        var imageNames = (1...15).compactMap { "card_\($0)" }
         
-        for _ in 1...count {
-            if let index = values.indices.randomElement() {
-                cards.append(Card(value: values[index]))
-                values.remove(at: index)
+        for _ in 1...game.pairs {
+            if let index = imageNames.indices.randomElement() {
+                cards.append(Card(value: imageNames[index]))
+                imageNames.remove(at: index)
             }
         }
+        
+        print("Created array of \(cards.count) cards")
         
         for card in cards {
             cards.append(Card(value: card.value))
         }
+        print("duplicated array to a total of \(cards.count) cards")
         
         return cards.shuffled()
     }
     
-    func getCardSize() -> CGFloat {
-        switch difficulty {
-        case .easy:
-            return 300
-        case .medium:
-            return 150
-        case .difficult:
-            return 150
-        }
-    }
+    
     
     func restart() {
         cards.removeAll()
         cardsLeft = 0
         pairs = 0
-        self.cards = generateArrayFromRandomElements(count: difficulty.numberOfCards() / 2)
+        self.cards = generateRandomArray()
     }
     
     func tapped(card: Card) {

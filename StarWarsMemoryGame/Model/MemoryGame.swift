@@ -7,7 +7,7 @@
 
 import UIKit
 
-enum GameDifficulty : String, CaseIterable {
+enum MemoryGame : String, CaseIterable {
     case easy = "Easy"
     case medium = "Medium"
     case difficult = "Difficult"
@@ -15,27 +15,33 @@ enum GameDifficulty : String, CaseIterable {
     func numberOfColumns() -> Int {
         switch self {
         case .easy:
-            return 2
-        case .medium:
-            return 2
-        case .difficult:
             return 4
+        case .medium:
+            return 4
+        case .difficult:
+            return 6
         }
     }
     
-    func numberOfCards() -> Int {
+    var pairs : Int {
         switch self {
         case .easy:
-            return 4
-        case .medium:
             return 8
+        case .medium:
+            return 12
         case .difficult:
-            return 16
+            return 15
         }
     }
-
-}
-
-struct Game {
-    var cards : [Card]
+    
+    var cardSize : CGFloat {
+        switch self {
+        case .easy:
+            return 115
+        case .medium:
+            return 85
+        case .difficult:
+            return 85
+        }
+    }
 }
