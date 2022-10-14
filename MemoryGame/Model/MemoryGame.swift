@@ -7,13 +7,24 @@
 
 import UIKit
 
-enum MemoryGame : String, CaseIterable {
+enum GameDifficulty : String, CaseIterable {
     case easy = "Easy"
     case medium = "Medium"
     case difficult = "Difficult"
+}
+
+enum GameState : String{
+    case playing = "playing"
+    case checking = "checking"
+    case finished = "finished"
+}
+
+struct MemoryGame {
+    var difficulty : GameDifficulty
+    var state : GameState = .playing
     
     func numberOfColumns() -> Int {
-        switch self {
+        switch difficulty {
         case .easy:
             return 4
         case .medium:
@@ -24,7 +35,7 @@ enum MemoryGame : String, CaseIterable {
     }
     
     var pairs : Int {
-        switch self {
+        switch difficulty {
         case .easy:
             return 8
         case .medium:
@@ -35,7 +46,7 @@ enum MemoryGame : String, CaseIterable {
     }
     
     var cardSize : CGFloat {
-        switch self {
+        switch difficulty {
         case .easy:
             return 115
         case .medium:

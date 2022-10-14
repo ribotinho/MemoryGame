@@ -12,7 +12,6 @@ struct OnboardingView: View {
     var body: some View {
         NavigationView{
             VStack{
-                
                 Image("fruit")
                     .resizable()
                     .scaledToFit()
@@ -25,10 +24,11 @@ struct OnboardingView: View {
                 
                 Text("Choose your difficulty")
                     .font(Fonts.tangoSans(weight: .regular, size: 30))
+                    .padding(.bottom)
                 
-                ForEach(MemoryGame.allCases, id: \.self) { difficulty in
+                ForEach(GameDifficulty.allCases, id: \.self) { difficulty in
                     
-                    let gameViewModel = MemoryGameViewModel(game: difficulty)
+                    let gameViewModel = MemoryGameViewModel(game: MemoryGame(difficulty: difficulty))
                     
                     NavigationLink(destination: MemoryGameView(viewModel: gameViewModel)){
                         MenuButtonView(title: difficulty.rawValue)

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F3888CD28F94FD80002120A /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3888CC28F94FD80002120A /* AlertView.swift */; };
+		5F3888CF28F958D30002120A /* MemoryGameHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3888CE28F958D30002120A /* MemoryGameHeaderView.swift */; };
 		5FB8A0A928F8801600DC0B00 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB8A0A828F8801600DC0B00 /* String+Ext.swift */; };
 		5FB8A0AF28F884FC00DC0B00 /* TangoSans_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5FB8A0AB28F884EA00DC0B00 /* TangoSans_Bold.ttf */; };
 		5FB8A0B228F8850300DC0B00 /* TangoSans_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5FB8A0AD28F884EA00DC0B00 /* TangoSans_Regular.ttf */; };
@@ -24,12 +26,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5F3888CC28F94FD80002120A /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+		5F3888CE28F958D30002120A /* MemoryGameHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGameHeaderView.swift; sourceTree = "<group>"; };
 		5FB8A0A828F8801600DC0B00 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		5FB8A0AB28F884EA00DC0B00 /* TangoSans_Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = TangoSans_Bold.ttf; sourceTree = "<group>"; };
 		5FB8A0AD28F884EA00DC0B00 /* TangoSans_Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = TangoSans_Regular.ttf; sourceTree = "<group>"; };
 		5FB8A0B328F885C800DC0B00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		5FB8A0B528F8860400DC0B00 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		5FF2ED3B28E6D54F005D62FD /* StarWarsMemoryGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWarsMemoryGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5FF2ED3B28E6D54F005D62FD /* MemoryGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemoryGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FF2ED3E28E6D54F005D62FD /* StarWarsMemoryGameApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsMemoryGameApp.swift; sourceTree = "<group>"; };
 		5FF2ED4228E6D551005D62FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5FF2ED4528E6D551005D62FD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -65,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				5FF2ED5828E6D931005D62FD /* MemoryGameView.swift */,
+				5F3888CE28F958D30002120A /* MemoryGameHeaderView.swift */,
 				5FF2ED5D28E6E41B005D62FD /* MemoryGameViewModel.swift */,
 			);
 			path = GameView;
@@ -92,7 +97,7 @@
 		5FF2ED3228E6D54F005D62FD = {
 			isa = PBXGroup;
 			children = (
-				5FF2ED3D28E6D54F005D62FD /* StarWarsMemoryGame */,
+				5FF2ED3D28E6D54F005D62FD /* MemoryGame */,
 				5FF2ED3C28E6D54F005D62FD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -100,12 +105,12 @@
 		5FF2ED3C28E6D54F005D62FD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5FF2ED3B28E6D54F005D62FD /* StarWarsMemoryGame.app */,
+				5FF2ED3B28E6D54F005D62FD /* MemoryGame.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5FF2ED3D28E6D54F005D62FD /* StarWarsMemoryGame */ = {
+		5FF2ED3D28E6D54F005D62FD /* MemoryGame */ = {
 			isa = PBXGroup;
 			children = (
 				5FB8A0B328F885C800DC0B00 /* Info.plist */,
@@ -117,7 +122,7 @@
 				5FF2ED4228E6D551005D62FD /* Assets.xcassets */,
 				5FF2ED4428E6D551005D62FD /* Preview Content */,
 			);
-			path = StarWarsMemoryGame;
+			path = MemoryGame;
 			sourceTree = "<group>";
 		};
 		5FF2ED4428E6D551005D62FD /* Preview Content */ = {
@@ -142,6 +147,7 @@
 			children = (
 				5FF2ED5228E6D686005D62FD /* CardView.swift */,
 				5FF2ED5A28E6DD5F005D62FD /* MenuButtonView.swift */,
+				5F3888CC28F94FD80002120A /* AlertView.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -158,9 +164,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5FF2ED3A28E6D54F005D62FD /* StarWarsMemoryGame */ = {
+		5FF2ED3A28E6D54F005D62FD /* MemoryGame */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5FF2ED4928E6D551005D62FD /* Build configuration list for PBXNativeTarget "StarWarsMemoryGame" */;
+			buildConfigurationList = 5FF2ED4928E6D551005D62FD /* Build configuration list for PBXNativeTarget "MemoryGame" */;
 			buildPhases = (
 				5FF2ED3728E6D54F005D62FD /* Sources */,
 				5FF2ED3828E6D54F005D62FD /* Frameworks */,
@@ -170,9 +176,9 @@
 			);
 			dependencies = (
 			);
-			name = StarWarsMemoryGame;
+			name = MemoryGame;
 			productName = StarWarsMemoryGame;
-			productReference = 5FF2ED3B28E6D54F005D62FD /* StarWarsMemoryGame.app */;
+			productReference = 5FF2ED3B28E6D54F005D62FD /* MemoryGame.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -190,7 +196,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 5FF2ED3628E6D54F005D62FD /* Build configuration list for PBXProject "StarWarsMemoryGame" */;
+			buildConfigurationList = 5FF2ED3628E6D54F005D62FD /* Build configuration list for PBXProject "MemoryGame" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -203,7 +209,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5FF2ED3A28E6D54F005D62FD /* StarWarsMemoryGame */,
+				5FF2ED3A28E6D54F005D62FD /* MemoryGame */,
 			);
 		};
 /* End PBXProject section */
@@ -230,10 +236,12 @@
 				5FB8A0A928F8801600DC0B00 /* String+Ext.swift in Sources */,
 				5FF2ED4D28E6D606005D62FD /* MemoryGame.swift in Sources */,
 				5FF2ED3F28E6D54F005D62FD /* StarWarsMemoryGameApp.swift in Sources */,
+				5F3888CD28F94FD80002120A /* AlertView.swift in Sources */,
 				5FF2ED4F28E6D60C005D62FD /* Card.swift in Sources */,
 				5FF2ED5B28E6DD5F005D62FD /* MenuButtonView.swift in Sources */,
 				5FB8A0B628F8860400DC0B00 /* Constants.swift in Sources */,
 				5FF2ED5E28E6E41B005D62FD /* MemoryGameViewModel.swift in Sources */,
+				5F3888CF28F958D30002120A /* MemoryGameHeaderView.swift in Sources */,
 				5FF2ED5628E6D920005D62FD /* OnboardingView.swift in Sources */,
 				5FF2ED5928E6D931005D62FD /* MemoryGameView.swift in Sources */,
 				5FF2ED5328E6D686005D62FD /* CardView.swift in Sources */,
@@ -364,11 +372,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"StarWarsMemoryGame/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"MemoryGame/Preview Content\"";
 				DEVELOPMENT_TEAM = 97979SR3M8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = StarWarsMemoryGame/Info.plist;
+				INFOPLIST_FILE = MemoryGame/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Fruits;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.board-games";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -382,9 +390,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.pauribot.StarWarsMemoryGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -395,11 +406,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"StarWarsMemoryGame/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"MemoryGame/Preview Content\"";
 				DEVELOPMENT_TEAM = 97979SR3M8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = StarWarsMemoryGame/Info.plist;
+				INFOPLIST_FILE = MemoryGame/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Fruits;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.board-games";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -413,16 +424,19 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.pauribot.StarWarsMemoryGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5FF2ED3628E6D54F005D62FD /* Build configuration list for PBXProject "StarWarsMemoryGame" */ = {
+		5FF2ED3628E6D54F005D62FD /* Build configuration list for PBXProject "MemoryGame" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5FF2ED4728E6D551005D62FD /* Debug */,
@@ -431,7 +445,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5FF2ED4928E6D551005D62FD /* Build configuration list for PBXNativeTarget "StarWarsMemoryGame" */ = {
+		5FF2ED4928E6D551005D62FD /* Build configuration list for PBXNativeTarget "MemoryGame" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5FF2ED4A28E6D551005D62FD /* Debug */,

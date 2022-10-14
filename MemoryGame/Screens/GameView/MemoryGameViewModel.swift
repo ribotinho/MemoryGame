@@ -11,12 +11,12 @@ import SwiftUI
 final class MemoryGameViewModel : ObservableObject {
     
     @Published var cards : [Card] = []
-    @Published var pairs = 0
-    var cardsLeft : Int = 0
+    @Published var completedPairs = 0
+    @Published var movements = 0
+    @Published var showAlert : Bool = false
     var game : MemoryGame
     var columns : [GridItem]
-    var tappedCardIndex : Int?
-    
+    private var tappedCardIndex : Int?
     
     
     init(game: MemoryGame){
@@ -27,44 +27,43 @@ final class MemoryGameViewModel : ObservableObject {
     
     
     func generateRandomArray() -> [Card] {
-        print("hello im here")
         var cards : [Card] = []
         var imageNames = (1...15).compactMap { "card_\($0)" }
         
         for _ in 1...game.pairs {
             if let index = imageNames.indices.randomElement() {
                 cards.append(Card(value: imageNames[index]))
+                cards.append(Card(value: imageNames[index]))
                 imageNames.remove(at: index)
             }
         }
         
-        print("Created array of \(cards.count) cards")
-        
-        for card in cards {
-            cards.append(Card(value: card.value))
-        }
-        print("duplicated array to a total of \(cards.count) cards")
-        
         return cards.shuffled()
     }
     
-    
-    
     func restart() {
         cards.removeAll()
-        cardsLeft = 0
-        pairs = 0
-        self.cards = generateRandomArray()
+        completedPairs = 0
+        movements = 0
+        cards = generateRandomArray()
     }
     
     func tapped(card: Card) {
-        guard let index = cards.firstIndex(where: {$0.id == card.id}) else { return }
+        movements += 1
+        
+        game.state = .checking
+        
+        guard let index = cards.firstIndex(where: {$0.id == card.id}) else {
+            game.state = .playing
+            return
+        }
         
         if !card.isMatched {
             cards[index].isFlipped.toggle()
         }
         
         guard let tappedCardIndex = tappedCardIndex else {
+            game.state = .playing
             tappedCardIndex = index
             return
         }
@@ -73,14 +72,20 @@ final class MemoryGameViewModel : ObservableObject {
             if cards[tappedCardIndex].value == cards[index].value {
                 cards[index].isMatched = true
                 cards[tappedCardIndex].isMatched = true
-                cardsLeft += 2
-                pairs += 1
+                completedPairs += 1
                 self.tappedCardIndex = nil
             }else {
                 cards[index].isFlipped = false
                 cards[tappedCardIndex].isFlipped = false
                 self.tappedCardIndex = nil
             }
+            
+            game.state = .playing
+            
+            if completedPairs == game.pairs {
+                showAlert = true
+                game.state = .finished
+            }
         }
-     }
+    }
 }
