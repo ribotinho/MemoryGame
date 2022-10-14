@@ -10,7 +10,7 @@ import SwiftUI
 struct MemoryGameView: View {
     
     @Environment(\.isPresented) var isPresented
-    @ObservedObject var viewModel : MemoryGameViewModel
+    @StateObject var viewModel : MemoryGameViewModel
     
     var body: some View {
         
@@ -34,7 +34,9 @@ struct MemoryGameView: View {
                                 if (viewModel.game.state == .checking){
                                     print("❌ checking")
                                 }else {
-                                    viewModel.tapped(card: card)
+                                    if !card.isMatched && !card.isFlipped && !viewModel.showAlert{
+                                        viewModel.tapped(card: card)
+                                    }
                                 }
                             }
                     }

@@ -9,10 +9,10 @@ import SwiftUI
 
 struct MemoryGameHeaderView: View {
     
-    var viewModel : MemoryGameViewModel
+    @ObservedObject var viewModel : MemoryGameViewModel
     
     var body: some View {
-        VStack {
+        VStack{
             HStack {
                 Text("Difficulty")
                     .font(Fonts.tangoSans(weight: .regular, size: 16))
@@ -31,13 +31,10 @@ struct MemoryGameHeaderView: View {
                 Spacer()
                 Text("\(viewModel.completedPairs)")
             }
+            
+            HorizontalProgressView(viewModel: viewModel)
         }
         .padding([.leading, .trailing])
     }
 }
 
-struct MemoryGameHeaderView_Previews: PreviewProvider {
-    static var previews: some View {
-        MemoryGameHeaderView(viewModel: MemoryGameViewModel(game: MemoryGame(difficulty: .easy)))
-    }
-}

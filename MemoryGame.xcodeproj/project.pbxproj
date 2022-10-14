@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5F3888CD28F94FD80002120A /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3888CC28F94FD80002120A /* AlertView.swift */; };
 		5F3888CF28F958D30002120A /* MemoryGameHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3888CE28F958D30002120A /* MemoryGameHeaderView.swift */; };
+		5F3888D128F95E9B0002120A /* HorizontalProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3888D028F95E9B0002120A /* HorizontalProgressView.swift */; };
 		5FB8A0A928F8801600DC0B00 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB8A0A828F8801600DC0B00 /* String+Ext.swift */; };
 		5FB8A0AF28F884FC00DC0B00 /* TangoSans_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5FB8A0AB28F884EA00DC0B00 /* TangoSans_Bold.ttf */; };
 		5FB8A0B228F8850300DC0B00 /* TangoSans_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5FB8A0AD28F884EA00DC0B00 /* TangoSans_Regular.ttf */; };
@@ -28,6 +29,7 @@
 /* Begin PBXFileReference section */
 		5F3888CC28F94FD80002120A /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		5F3888CE28F958D30002120A /* MemoryGameHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGameHeaderView.swift; sourceTree = "<group>"; };
+		5F3888D028F95E9B0002120A /* HorizontalProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalProgressView.swift; sourceTree = "<group>"; };
 		5FB8A0A828F8801600DC0B00 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		5FB8A0AB28F884EA00DC0B00 /* TangoSans_Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = TangoSans_Bold.ttf; sourceTree = "<group>"; };
 		5FB8A0AD28F884EA00DC0B00 /* TangoSans_Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = TangoSans_Regular.ttf; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 				5FF2ED5228E6D686005D62FD /* CardView.swift */,
 				5FF2ED5A28E6DD5F005D62FD /* MenuButtonView.swift */,
 				5F3888CC28F94FD80002120A /* AlertView.swift */,
+				5F3888D028F95E9B0002120A /* HorizontalProgressView.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 				5FF2ED4F28E6D60C005D62FD /* Card.swift in Sources */,
 				5FF2ED5B28E6DD5F005D62FD /* MenuButtonView.swift in Sources */,
 				5FB8A0B628F8860400DC0B00 /* Constants.swift in Sources */,
+				5F3888D128F95E9B0002120A /* HorizontalProgressView.swift in Sources */,
 				5FF2ED5E28E6E41B005D62FD /* MemoryGameViewModel.swift in Sources */,
 				5F3888CF28F958D30002120A /* MemoryGameHeaderView.swift in Sources */,
 				5FF2ED5628E6D920005D62FD /* OnboardingView.swift in Sources */,

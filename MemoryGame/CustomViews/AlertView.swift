@@ -7,10 +7,39 @@
 
 import SwiftUI
 
+enum AlertType {
+    case win
+    case record
+    case timeout
+}
+
 struct AlertView: View {
     
     var viewModel : MemoryGameViewModel
     var buttonWidth : CGFloat = 125
+    var title : String  {
+        switch viewModel.type {
+        case .win, .record:
+            return "Congratulations! 🥳"
+        case .timeout:
+            return "Timeout! ⏰"
+        case .none:
+            return ""
+        }
+    }
+    
+    var description : String  {
+        switch viewModel.type {
+        case .win:
+            return "You have successfully completed the game. You rock!"
+        case .record:
+            return "WOW, you're amazing! You have established a new record for this difficulty!"
+        case .timeout:
+            return "You have run out of time.\nBetter luck next time! "
+        case .none:
+            return ""
+        }
+    }
     
     var body: some View {
         ZStack {
@@ -20,12 +49,12 @@ struct AlertView: View {
             
             VStack{
                 VStack(alignment: .leading) {
-                    Text("Congratulations! 🥳")
+                    Text(title)
                         .font(Fonts.tangoSans(weight: .bold, size: 25))
                         .foregroundColor(.pink)
                         .padding(.bottom)
                     
-                    Text("Congratulations you have finished this game")
+                    Text(description)
                         .font(Fonts.tangoSans(weight: .regular, size: 15))
                 }
                 
@@ -61,10 +90,6 @@ struct AlertView: View {
         }
         .frame(width: 150, height: 200)
         .shadow(radius: 10)
-    }
-    
-    func cancelButtonTapped(){
-        
     }
 }
 
