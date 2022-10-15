@@ -48,6 +48,7 @@ final class MemoryGameViewModel : ObservableObject {
         cards.removeAll()
         completedPairs = 0
         movements = 0
+        tappedCardIndex = nil
         seconds = PersistenceManager.shared.getCurrenTimer()
         stopTimer()
         cards = generateRandomArray()
