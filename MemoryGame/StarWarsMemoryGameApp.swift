@@ -11,7 +11,19 @@ import SwiftUI
 struct StarWarsMemoryGameApp: App {
     var body: some Scene {
         WindowGroup {
-            OnboardingView()
+            TabView {
+                
+                OnboardingView()
+                    .tabItem {
+                        Label("Play", systemImage: "gamecontroller")
+                    }
+                
+                SettingsView()
+                    .tabItem {
+                        Label("Settings", systemImage: "gear")
+                    }
+            }
+            
         }
     }
 }

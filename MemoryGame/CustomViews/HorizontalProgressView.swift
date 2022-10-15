@@ -15,7 +15,7 @@ struct HorizontalProgressView: View {
         
         GeometryReader { proxy in
             ZStack (alignment: .leading){
-                Color.secondary
+                Color.secondary.opacity(0.75)
                     .frame(height: 15)
                     .frame(maxWidth: .infinity)
                     .clipShape(Capsule())
@@ -25,10 +25,13 @@ struct HorizontalProgressView: View {
                     .clipShape(Capsule())
             }
         }
+        .onAppear{
+            viewModel.updateTimer()
+        }
     }
     
     func calculateWidth(for width: CGFloat) -> CGFloat {
-        let minWidth = width / 60
+        let minWidth = width / CGFloat(PersistenceManager.shared.getCurrenTimer())
         return CGFloat(minWidth * CGFloat(viewModel.seconds))
     }
 }

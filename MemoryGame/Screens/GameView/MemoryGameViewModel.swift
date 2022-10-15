@@ -14,7 +14,7 @@ final class MemoryGameViewModel : ObservableObject {
     @Published var completedPairs = 0
     @Published var movements = 0
     @Published var showAlert : Bool = false
-    @Published var seconds = 60
+    @Published var seconds : Int = PersistenceManager.shared.getCurrenTimer()
     var type : AlertType?
     var game : MemoryGame
     var columns : [GridItem]
@@ -48,7 +48,7 @@ final class MemoryGameViewModel : ObservableObject {
         cards.removeAll()
         completedPairs = 0
         movements = 0
-        seconds = 60
+        seconds = PersistenceManager.shared.getCurrenTimer()
         stopTimer()
         cards = generateRandomArray()
     }
@@ -92,8 +92,16 @@ final class MemoryGameViewModel : ObservableObject {
             if completedPairs == game.pairs {
                 stopTimer()
                 game.state = .finished
-                self.type = .win
-                showAlert = true
+                
+                let currentRecord = PersistenceManager.shared.getCurrentRecord(for: game.difficulty)
+                if movements < currentRecord {
+                    type = .record
+                    showAlert = true
+                    PersistenceManager.shared.setNewRecord(for: game.difficulty, movements: movements)
+                }else {
+                    type = .win
+                    showAlert = true
+                }
             }
         }
     }
@@ -113,5 +121,9 @@ final class MemoryGameViewModel : ObservableObject {
     func stopTimer() {
         self.timer?.invalidate()
         self.timer = nil
+    }
+    
+    func updateTimer() {
+        seconds = PersistenceManager.shared.getCurrenTimer()
     }
 }

@@ -9,7 +9,6 @@ import SwiftUI
 
 struct MemoryGameView: View {
     
-    @Environment(\.isPresented) var isPresented
     @StateObject var viewModel : MemoryGameViewModel
     
     var body: some View {
@@ -50,7 +49,7 @@ struct MemoryGameView: View {
                     .padding()
             }
             .zIndex(1)
-            .onChange(of: isPresented) { _ in
+            .onDisappear{
                 viewModel.restart()
             }
         }

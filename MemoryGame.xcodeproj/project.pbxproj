@@ -10,6 +10,8 @@
 		5F3888CD28F94FD80002120A /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3888CC28F94FD80002120A /* AlertView.swift */; };
 		5F3888CF28F958D30002120A /* MemoryGameHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3888CE28F958D30002120A /* MemoryGameHeaderView.swift */; };
 		5F3888D128F95E9B0002120A /* HorizontalProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3888D028F95E9B0002120A /* HorizontalProgressView.swift */; };
+		5F3888D428F9ACE20002120A /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3888D328F9ACE20002120A /* PersistenceManager.swift */; };
+		5F3888D728F9B1BF0002120A /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3888D628F9B1BF0002120A /* SettingsView.swift */; };
 		5FB8A0A928F8801600DC0B00 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB8A0A828F8801600DC0B00 /* String+Ext.swift */; };
 		5FB8A0AF28F884FC00DC0B00 /* TangoSans_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5FB8A0AB28F884EA00DC0B00 /* TangoSans_Bold.ttf */; };
 		5FB8A0B228F8850300DC0B00 /* TangoSans_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5FB8A0AD28F884EA00DC0B00 /* TangoSans_Regular.ttf */; };
@@ -30,6 +32,8 @@
 		5F3888CC28F94FD80002120A /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		5F3888CE28F958D30002120A /* MemoryGameHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGameHeaderView.swift; sourceTree = "<group>"; };
 		5F3888D028F95E9B0002120A /* HorizontalProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalProgressView.swift; sourceTree = "<group>"; };
+		5F3888D328F9ACE20002120A /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
+		5F3888D628F9B1BF0002120A /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		5FB8A0A828F8801600DC0B00 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		5FB8A0AB28F884EA00DC0B00 /* TangoSans_Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = TangoSans_Bold.ttf; sourceTree = "<group>"; };
 		5FB8A0AD28F884EA00DC0B00 /* TangoSans_Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = TangoSans_Regular.ttf; sourceTree = "<group>"; };
@@ -59,6 +63,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5F3888D228F9ACD30002120A /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				5F3888D328F9ACE20002120A /* PersistenceManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		5F3888D528F9B1B40002120A /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				5F3888D628F9B1BF0002120A /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		5FB8A0A528F87FD000DC0B00 /* OnboardingView */ = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +137,7 @@
 			children = (
 				5FB8A0B328F885C800DC0B00 /* Info.plist */,
 				5FF2ED3E28E6D54F005D62FD /* StarWarsMemoryGameApp.swift */,
+				5F3888D228F9ACD30002120A /* Managers */,
 				5FF2ED5428E6D907005D62FD /* Screens */,
 				5FF2ED5028E6D610005D62FD /* Model */,
 				5FF2ED5128E6D673005D62FD /* CustomViews */,
@@ -158,6 +179,7 @@
 		5FF2ED5428E6D907005D62FD /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				5F3888D528F9B1B40002120A /* Settings */,
 				5FB8A0A528F87FD000DC0B00 /* OnboardingView */,
 				5FB8A0A628F87FD700DC0B00 /* GameView */,
 			);
@@ -236,7 +258,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F3888D728F9B1BF0002120A /* SettingsView.swift in Sources */,
 				5FB8A0A928F8801600DC0B00 /* String+Ext.swift in Sources */,
+				5F3888D428F9ACE20002120A /* PersistenceManager.swift in Sources */,
 				5FF2ED4D28E6D606005D62FD /* MemoryGame.swift in Sources */,
 				5FF2ED3F28E6D54F005D62FD /* StarWarsMemoryGameApp.swift in Sources */,
 				5F3888CD28F94FD80002120A /* AlertView.swift in Sources */,

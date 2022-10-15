@@ -50,7 +50,7 @@ struct MemoryGame {
         case .easy:
             return 115
         case .medium:
-            return 80
+            return 70
         case .difficult:
             return 80
         }
